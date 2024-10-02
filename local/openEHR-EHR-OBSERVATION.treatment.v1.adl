@@ -24,7 +24,7 @@ description
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"5ea27c82-3196-3aae-b13a-bf4197a8d51c">
-		["MD5-CAM-1.0.1"] = <"00fd67140c0a02d25bd41316d7202fa6">
+		["MD5-CAM-1.0.1"] = <"683c1d1e9ee802491481dc4b4b5628a6">
 	>
 
 definition
@@ -35,6 +35,16 @@ definition
 					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
 						data matches {
 							ITEM_TREE[at0003] matches {*}    -- Tree
+						}
+						state matches {
+							ITEM_TREE[at0004] matches {    -- Item tree
+								items cardinality matches {0..*; unordered} matches {
+									allow_archetype CLUSTER[at0005] occurrences matches {0..*} matches {    -- Noncommunicable Diseases
+										include
+											archetype_id/value matches {/.*/}
+									}
+								}
+							}
 						}
 					}
 				}
@@ -61,6 +71,14 @@ ontology
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0005"] = <
+					text = <"Noncommunicable Diseases">
+					description = <"Noncommunicable Diseases">
 				>
 			>
 		>
