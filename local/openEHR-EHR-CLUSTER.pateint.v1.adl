@@ -1,6 +1,5 @@
 archetype (adl_version=1.4; uid=b3775f12-6098-44f0-8bba-7fa1f1991f8e)
 	openEHR-EHR-CLUSTER.pateint.v1
-
 concept
 	[at0000]
 
