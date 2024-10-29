@@ -1,6 +1,7 @@
 archetype (adl_version=1.4; uid=23aa4609-ce6f-43d9-9d36-1b99b7fba35e)
 	openEHR-EHR-INSTRUCTION.instruction.v1
 
+
 concept
 	[at0000]
 
@@ -94,6 +95,7 @@ ontology
 				["at0007"] = <
 					text = <"CLUSTER_SLOT">
 					description = <"">
+				
 				>
 			>
 		>
